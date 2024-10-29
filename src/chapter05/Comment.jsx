@@ -1,9 +1,49 @@
 import React from "react";
 
+const styles={
+    wrapper:{
+        margin:8,
+        padding:8,
+        display:"flex",
+        flexDirection:"row",
+        border : "1px solid grey",
+        borderRadius:16
+    },
+    imageContainer:{},
+    image:{
+        width:50,
+        height:50,
+        borderRadius:25,
+    },
+    contentContainer:{
+        marginLeft:8,
+        display:"flex",
+        flexDirection:"column",
+        justifyContent:"center",
+    },
+    nameText:{
+        color:"black",
+        fontSize:16,
+        fontWeight:"bold"
+    },
+    commnetText:{
+        color:"black",
+        fontSize:16,
+        
+    }
+};
+
 function Comment(props){
     return(
-        <div>
-            <h1>대왕 카스테라</h1>
+        <div style={styles.wrapper}>
+            <div style={styles.imageContainer}>
+                <img src={props.image_url} alt="교케레츠" style={styles.image}/>
+            </div>
+
+            <div style={styles.contentContainer}>
+                <span style={styles.nameText}>{props.name}</span>
+                <span style={styles.commnetText}>{props.commnet}</span>
+            </div>
         </div>
     );
 }
