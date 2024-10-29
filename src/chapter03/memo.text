@@ -1,0 +1,26 @@
+JSX와 React.createElement는 React에서 컴포넌트를 생성하는 두 가지 방식입니다. 주요 차이는 작성 방식과 가독성에 있습니다:
+
+작성 방식
+
+JSX: JavaScript와 XML을 결합한 형태로, <div>Hello</div>와 같은 HTML 유사 구문을 사용합니다. React 코드를 더 직관적이고 간결하게 작성할 수 있어 가독성이 높아집니다.
+React.createElement: 순수 JavaScript로 구성되며, JSX를 사용하지 않을 때는 React.createElement를 직접 호출해서 요소를 만들어야 합니다. 이 방식은 함수 호출 형태로 요소를 생성합니다. 예를 들어, <div>Hello</div>는 React.createElement('div', null, 'Hello')로 표현됩니다.
+빌드 과정
+
+JSX는 React 코드 작성 시 Babel 같은 컴파일러가 이를 React.createElement 함수 호출로 변환합니다. 즉, JSX는 컴파일 단계에서 React.createElement로 변환되므로 실행 시에 동일하게 작동합니다.
+가독성 및 유지보수성
+
+JSX는 HTML과 유사해, 더 직관적이고 읽기 쉬우며, 유지보수하기도 용이합니다.
+반면 React.createElement는 반복적이고 긴 코드가 될 수 있어, JSX보다 가독성이 떨어질 수 있습니다.
+JSX를 사용하는 것이 대부분의 React 프로젝트에서 표준 방식입니다. React.createElement는 컴파일러가 필요하지 않은 경우나 더 낮은 수준의 React API를 사용할 때 유용할 수 있습니다.
+
+대부분의 React 프로젝트에서는 JSX 방식이 더 나은 선택입니다. 이유는 다음과 같습니다:
+
+가독성: JSX는 HTML과 유사해 코드가 직관적이고 읽기 쉽습니다. 컴포넌트 구조와 내용이 한눈에 들어오기 때문에 유지보수가 더 수월합니다. 특히 프로젝트가 커질수록 JSX의 가독성이 큰 장점이 됩니다.
+
+생산성: JSX는 짧고 간단하게 컴포넌트를 작성할 수 있어 코드 작성 속도를 높여줍니다. React.createElement를 반복해서 작성하는 것보다 생산성이 높습니다.
+
+커뮤니티 표준: React 커뮤니티와 공식 문서에서도 JSX를 기본으로 설명하며, 대부분의 예제와 라이브러리도 JSX를 기준으로 작성되어 있습니다. 협업 시 다른 개발자들과의 코드 호환성을 고려할 때도 JSX가 유리합니다.
+
+타입스크립트 및 타입 지원: JSX는 타입스크립트와의 호환성도 뛰어나며, IDE에서 자동 완성 기능을 지원해 개발 경험이 향상됩니다.
+
+React.createElement가 유리한 경우는 거의 없지만, 예외적으로 컴파일러가 필요 없는 환경이나 더 낮은 수준에서 React 요소를 직접 생성해야 하는 상황에서 사용됩니다.
