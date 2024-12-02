@@ -1,12 +1,12 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
 import './index.css';
-import NotificationList from './chapter06/NotificationList';
 import reportWebVitals from './reportWebVitals';
+import ConfirmButton from './chapter08/ConfirmButton';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
-  <NotificationList /> 
+  <ConfirmButton /> 
 );
 
 reportWebVitals();
